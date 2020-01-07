@@ -59,7 +59,7 @@ resource "azuread_service_principal" "app" {
 resource "azuread_service_principal_password" "app" {
   service_principal_id = azuread_service_principal.app.id
   value                = random_id.client_secret.id
-  end_date             = "2020-01-01T01:02:03Z"
+  end_date             = "2021-01-01T01:02:03Z"
   depends_on           = [azurerm_role_assignment.role_assignment]
 }
 
